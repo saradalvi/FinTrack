@@ -1,0 +1,515 @@
+.registerPage {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(99, 230, 190, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(40, 130, 100, 0.08),
+      transparent 30%
+    ),
+    #07110f;
+}
+
+.backgroundGlow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  left: -160px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 230, 190, 0.07);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.registerContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1080px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.4),
+    inset 0 1px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(25px);
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brandSection {
+  min-height: 680px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 50px;
+
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(99, 230, 190, 0.1),
+      transparent 35%
+    ),
+    rgba(255, 255, 255, 0.02);
+}
+
+.logo {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.logoMark {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #63e6be;
+  color: #06100d;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.logoAccent {
+  color: #63e6be;
+}
+
+.brandContent {
+  max-width: 450px;
+}
+
+.brandLabel {
+  margin-bottom: 20px;
+
+  color: #63e6be;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.brandContent h1 {
+  margin: 0;
+
+  color: #f5f7f6;
+
+  font-size: clamp(45px, 5vw, 66px);
+
+  line-height: 0.98;
+  letter-spacing: -3.5px;
+}
+
+.brandContent h1 span {
+  color: #63e6be;
+}
+
+.brandContent p {
+  max-width: 410px;
+
+  margin-top: 26px;
+
+  color: #84928d;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #899691;
+
+  font-size: 11px;
+}
+
+.check {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(99, 230, 190, 0.1);
+
+  color: #63e6be;
+
+  font-size: 11px;
+}
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.registerCard {
+  min-height: 680px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px 55px;
+
+  background: rgba(5, 14, 12, 0.6);
+}
+
+.mobileLogo {
+  display: none;
+}
+
+.cardHeader {
+  margin-bottom: 28px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+
+  color: #f5f7f6;
+
+  font-size: 31px;
+  letter-spacing: -1.5px;
+}
+
+.cardHeader p {
+  margin-top: 9px;
+
+  color: #74827d;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.errorMessage,
+.successMessage {
+  margin-bottom: 17px;
+
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+}
+
+.errorMessage {
+  border: 1px solid rgba(255, 100, 100, 0.2);
+
+  background: rgba(255, 80, 80, 0.07);
+
+  color: #ff9999;
+}
+
+.successMessage {
+  border: 1px solid rgba(99, 230, 190, 0.2);
+
+  background: rgba(99, 230, 190, 0.07);
+
+  color: #63e6be;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.formGroup {
+  margin-bottom: 17px;
+}
+
+.formGroup label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #c3ccc8;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.formGroup input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 11px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: white;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formGroup input::placeholder {
+  color: #52605b;
+}
+
+.formGroup input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.formGroup input:focus {
+  border-color: rgba(99, 230, 190, 0.55);
+
+  background: rgba(99, 230, 190, 0.025);
+
+  box-shadow:
+    0 0 0 3px rgba(99, 230, 190, 0.07);
+}
+
+.passwordHint {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #56645f;
+
+  font-size: 9px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.submitButton {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #63e6be;
+  color: #06100d;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(99, 230, 190, 0.18);
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 27px 0 19px;
+
+  color: #4e5c57;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.loginText {
+  margin: 0;
+
+  text-align: center;
+
+  color: #68756f;
+
+  font-size: 11px;
+}
+
+.loginText a {
+  color: #63e6be;
+
+  font-weight: 600;
+}
+
+.backHome {
+  margin-top: 23px;
+
+  text-align: center;
+
+  color: #66736e;
+
+  font-size: 10px;
+}
+
+.backHome:hover {
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+  .registerContainer {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+  .brandSection {
+    display: none;
+  }
+
+  .registerCard {
+    min-height: 620px;
+
+    padding: 42px;
+  }
+
+  .mobileLogo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 32px;
+
+    color: white;
+
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .mobileLogo .logoMark {
+    width: 31px;
+    height: 31px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .registerPage {
+    padding: 15px;
+  }
+
+  .registerContainer {
+    border-radius: 21px;
+  }
+
+  .registerCard {
+    min-height: 600px;
+
+    padding: 30px 22px;
+  }
+
+  .cardHeader h2 {
+    font-size: 28px;
+  }
+
+}
